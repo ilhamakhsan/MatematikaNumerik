@@ -1,0 +1,8 @@
+## CREATE DATA
+penghasilan = data_latihan$'Penghasilan Orang Tua (Rp)'
+ipk = data_latihan$IPK
+
+relasi = lm(ipk~penghasilan)
+data_baru_penghasilan = data.frame(penghasilan=3250000)
+prediksi_ipk = predict(relasi,data_baru_penghasilan)
+prediksi_ipk
